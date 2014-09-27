@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 8a7dfa06fab9b8f45a5b0c134831afd8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: -- R Shoulder inside
+    100002: -- L bicep twist
+    100004: Bip01 R Foot
+    100006: -- R Butt
+    100008: Bip01 Spine
+    100010: -- L Shoulder inside
+    100012: -- L knuckle
+    100014: Bip01 Spine1
+    100016: Bip01 R Calf
+    100018: Bip01 L Finger11
+    100020: -- R bicep twist
+    100022: Bip01 L Forearm
+    100024: Bip01 R Forearm
+    100026: Bip01 L Toe0
+    100028: -- L shoulder outside
+    100030: Bip01 Spine2
+    100032: -- L Knee
+    100034: Bip01 L Calf
+    100036: Bip01 L Foot
+    100038: Bip01 L Clavicle
+    100040: Bip01 R Finger01
+    100042: -- L Elbow
+    100044: Bip01 R Finger11
+    100046: -- R Knee
+    100048: Bone01
+    100050: Bip01 L Finger1
+    100052: //RootNode
+    100054: -- R Elbow
+    100056: Bip01 R Hand
+    100058: Bip01 L UpperArm
+    100060: Bip01 R UpperArm
+    100062: Bip01 R Finger0
+    100064: Bip01 Head
+    100066: Bip01 L Finger01
+    100068: Bip01 L Finger0
+    100070: Bip01 L Hand
+    100072: -- L wrist
+    100074: -- R knuckle
+    100076: Bip01 R Clavicle
+    100078: -- R Ankle
+    100080: Bip01
+    100082: Bip01 Pelvis
+    100084: -- R shoulder outside
+    100086: Bip01 R Thigh
+    100088: -- R wrist
+    100090: -- Neck smooth
+    100092: -- L ankle
+    100094: Bip01 Spine3
+    100096: Bip01 Neck
+    100098: Bip01 R Toe0
+    100100: Bip01 R Finger1
+    100102: Bip01 L Thigh
+    100104: -- L butt
+    100106: Object04
+    400000: -- R Shoulder inside
+    400002: -- L bicep twist
+    400004: Bip01 R Foot
+    400006: -- R Butt
+    400008: Bip01 Spine
+    400010: -- L Shoulder inside
+    400012: -- L knuckle
+    400014: Bip01 Spine1
+    400016: Bip01 R Calf
+    400018: Bip01 L Finger11
+    400020: -- R bicep twist
+    400022: Bip01 L Forearm
+    400024: Bip01 R Forearm
+    400026: Bip01 L Toe0
+    400028: -- L shoulder outside
+    400030: Bip01 Spine2
+    400032: -- L Knee
+    400034: Bip01 L Calf
+    400036: Bip01 L Foot
+    400038: Bip01 L Clavicle
+    400040: Bip01 R Finger01
+    400042: -- L Elbow
+    400044: Bip01 R Finger11
+    400046: -- R Knee
+    400048: Bone01
+    400050: Bip01 L Finger1
+    400052: //RootNode
+    400054: -- R Elbow
+    400056: Bip01 R Hand
+    400058: Bip01 L UpperArm
+    400060: Bip01 R UpperArm
+    400062: Bip01 R Finger0
+    400064: Bip01 Head
+    400066: Bip01 L Finger01
+    400068: Bip01 L Finger0
+    400070: Bip01 L Hand
+    400072: -- L wrist
+    400074: -- R knuckle
+    400076: Bip01 R Clavicle
+    400078: -- R Ankle
+    400080: Bip01
+    400082: Bip01 Pelvis
+    400084: -- R shoulder outside
+    400086: Bip01 R Thigh
+    400088: -- R wrist
+    400090: -- Neck smooth
+    400092: -- L ankle
+    400094: Bip01 Spine3
+    400096: Bip01 Neck
+    400098: Bip01 R Toe0
+    400100: Bip01 R Finger1
+    400102: Bip01 L Thigh
+    400104: -- L butt
+    400106: Object04
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

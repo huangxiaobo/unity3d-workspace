@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 484a77f4d2c0a8b4899ba2fbe5c50366
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: L-Arm
+    100002: L-Arm.2
+    100004: L-Arm.3
+    100006: L-Hand
+    100008: L-M1
+    100010: L-M2
+    100012: L-M4
+    100014: L-M5
+    100016: L-Middle
+    100018: L-P1
+    100020: L-P1.2
+    100022: L-P2
+    100024: L-P2.2
+    100026: L-P4
+    100028: L-P4.2
+    100030: L-P5
+    100032: L-P5.2
+    100034: L-Piky
+    100036: L-Point
+    100038: L-R1
+    100040: L-R2
+    100042: L-R4
+    100044: L-R5
+    100046: L-Ring
+    100048: L-T1
+    100050: L-T2
+    100052: L-T3
+    100054: L-Thumb
+    100056: L-Wrist
+    100058: L_Fingers
+    100060: L_Glove
+    100062: L_Glove.2
+    100064: L_Middle
+    100066: L_Middle.2
+    100068: L_Pinky
+    100070: L_Pinky.2
+    100072: L_Point
+    100074: L_Point.2
+    100076: L_Ring
+    100078: L_Ring.2
+    100080: L_Thumb
+    100082: L_Thumb.2
+    100084: Left Hand
+    100086: Null Object
+    100088: Null Object.10
+    100090: Null Object.10.2
+    100092: Null Object.10.2.2
+    100094: Null Object.11
+    100096: Null Object.11.2
+    100098: Null Object.11.2.2
+    100100: Null Object.12
+    100102: Null Object.12.2
+    100104: Null Object.12.2.2
+    100106: Null Object.13
+    100108: Null Object.13.2
+    100110: Null Object.13.2.2
+    100112: Null Object.14
+    100114: Null Object.14.2
+    100116: Null Object.14.2.2
+    100118: Null Object.15
+    100120: Null Object.15.2
+    100122: Null Object.2
+    100124: Null Object.2.2
+    100126: Null Object.2.2.2
+    100128: Null Object.3
+    100130: Null Object.3.2
+    100132: Null Object.3.2.2
+    100134: Null Object.4
+    100136: Null Object.4.2
+    100138: Null Object.4.2.2
+    100140: Null Object.5
+    100142: Null Object.5.2
+    100144: Null Object.5.2.2
+    100146: Null Object.6
+    100148: Null Object.6.2
+    100150: Null Object.6.2.2
+    100152: Null Object.7
+    100154: Null Object.7.2
+    100156: Null Object.7.2.2
+    100158: Null Object.8
+    100160: Null Object.8.2
+    100162: Null Object.8.2.2
+    100164: Null Object.9
+    100166: Null Object.9.2
+    100168: Null Object.9.2.2
+    100170: R-Arm
+    100172: R-Hand
+    100174: R-M1
+    100176: R-M2
+    100178: R-M4
+    100180: R-M5
+    100182: R-Middle
+    100184: R-P1
+    100186: R-P1.2
+    100188: R-P2
+    100190: R-P2.2
+    100192: R-P4
+    100194: R-P4.2
+    100196: R-P5
+    100198: R-P5.2
+    100200: R-Piky
+    100202: R-Point
+    100204: R-R1
+    100206: R-R2
+    100208: R-R4
+    100210: R-R5
+    100212: R-Ring
+    100214: R-T1
+    100216: R-T2
+    100218: R-T3
+    100220: R-Thumb
+    100222: R-Wrist
+    100224: R_Arm
+    100226: R_Arm.2
+    100228: R_Fingers
+    100230: R_GLove
+    100232: R_GLove.2
+    100234: R_Index
+    100236: R_Index.2
+    100238: R_Middle
+    100240: R_Middle.2
+    100242: R_Pinky
+    100244: R_Pinky.2
+    100246: R_Ring
+    100248: R_Ring.2
+    100250: R_Thumb
+    100252: R_Thumb.2
+    100254: Remi
+    100256: Remi.2
+    100258: //RootNode
+    100260: RightHand
+    400000: L-Arm
+    400002: L-Arm.2
+    400004: L-Arm.3
+    400006: L-Hand
+    400008: L-M1
+    400010: L-M2
+    400012: L-M4
+    400014: L-M5
+    400016: L-Middle
+    400018: L-P1
+    400020: L-P1.2
+    400022: L-P2
+    400024: L-P2.2
+    400026: L-P4
+    400028: L-P4.2
+    400030: L-P5
+    400032: L-P5.2
+    400034: L-Piky
+    400036: L-Point
+    400038: L-R1
+    400040: L-R2
+    400042: L-R4
+    400044: L-R5
+    400046: L-Ring
+    400048: L-T1
+    400050: L-T2
+    400052: L-T3
+    400054: L-Thumb
+    400056: L-Wrist
+    400058: L_Fingers
+    400060: L_Glove
+    400062: L_Glove.2
+    400064: L_Middle
+    400066: L_Middle.2
+    400068: L_Pinky
+    400070: L_Pinky.2
+    400072: L_Point
+    400074: L_Point.2
+    400076: L_Ring
+    400078: L_Ring.2
+    400080: L_Thumb
+    400082: L_Thumb.2
+    400084: Left Hand
+    400086: Null Object
+    400088: Null Object.10
+    400090: Null Object.10.2
+    400092: Null Object.10.2.2
+    400094: Null Object.11
+    400096: Null Object.11.2
+    400098: Null Object.11.2.2
+    400100: Null Object.12
+    400102: Null Object.12.2
+    400104: Null Object.12.2.2
+    400106: Null Object.13
+    400108: Null Object.13.2
+    400110: Null Object.13.2.2
+    400112: Null Object.14
+    400114: Null Object.14.2
+    400116: Null Object.14.2.2
+    400118: Null Object.15
+    400120: Null Object.15.2
+    400122: Null Object.2
+    400124: Null Object.2.2
+    400126: Null Object.2.2.2
+    400128: Null Object.3
+    400130: Null Object.3.2
+    400132: Null Object.3.2.2
+    400134: Null Object.4
+    400136: Null Object.4.2
+    400138: Null Object.4.2.2
+    400140: Null Object.5
+    400142: Null Object.5.2
+    400144: Null Object.5.2.2
+    400146: Null Object.6
+    400148: Null Object.6.2
+    400150: Null Object.6.2.2
+    400152: Null Object.7
+    400154: Null Object.7.2
+    400156: Null Object.7.2.2
+    400158: Null Object.8
+    400160: Null Object.8.2
+    400162: Null Object.8.2.2
+    400164: Null Object.9
+    400166: Null Object.9.2
+    400168: Null Object.9.2.2
+    400170: R-Arm
+    400172: R-Hand
+    400174: R-M1
+    400176: R-M2
+    400178: R-M4
+    400180: R-M5
+    400182: R-Middle
+    400184: R-P1
+    400186: R-P1.2
+    400188: R-P2
+    400190: R-P2.2
+    400192: R-P4
+    400194: R-P4.2
+    400196: R-P5
+    400198: R-P5.2
+    400200: R-Piky
+    400202: R-Point
+    400204: R-R1
+    400206: R-R2
+    400208: R-R4
+    400210: R-R5
+    400212: R-Ring
+    400214: R-T1
+    400216: R-T2
+    400218: R-T3
+    400220: R-Thumb
+    400222: R-Wrist
+    400224: R_Arm
+    400226: R_Arm.2
+    400228: R_Fingers
+    400230: R_GLove
+    400232: R_GLove.2
+    400234: R_Index
+    400236: R_Index.2
+    400238: R_Middle
+    400240: R_Middle.2
+    400242: R_Pinky
+    400244: R_Pinky.2
+    400246: R_Ring
+    400248: R_Ring.2
+    400250: R_Thumb
+    400252: R_Thumb.2
+    400254: Remi
+    400256: Remi.2
+    400258: //RootNode
+    400260: RightHand
+    2300000: Remi.2
+    3300000: Remi.2
+    4300000: Remi.2
+    4300002: L-Arm.3
+    4300004: L_Glove.2
+    4300006: L_Thumb.2
+    4300008: L_Point.2
+    4300010: L_Middle.2
+    4300012: L_Ring.2
+    4300014: L_Pinky.2
+    4300016: R_Arm.2
+    4300018: R_GLove.2
+    4300020: R_Thumb.2
+    4300022: R_Index.2
+    4300024: R_Middle.2
+    4300026: R_Ring.2
+    4300028: R_Pinky.2
+    11100000: //RootNode
+    13700000: L-Arm.3
+    13700002: L_Glove.2
+    13700004: L_Middle.2
+    13700006: L_Pinky.2
+    13700008: L_Point.2
+    13700010: L_Ring.2
+    13700012: L_Thumb.2
+    13700014: R_Arm.2
+    13700016: R_GLove.2
+    13700018: R_Index.2
+    13700020: R_Middle.2
+    13700022: R_Pinky.2
+    13700024: R_Ring.2
+    13700026: R_Thumb.2
+  materials:
+    importMaterials: 1
+    materialName: 3
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: 
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: cock
+      takeName: 
+      firstFrame: 2
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: relo1
+      takeName: 
+      firstFrame: 7
+      lastFrame: 11
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00499999989
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

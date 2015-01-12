@@ -12,7 +12,7 @@
 /*.userprefs
 /*.pidb
 /*.booproj
-/*.pyc
+*.pyc
 
 #Unity3D Generated File On Crash Reports
 sysinfo.txt

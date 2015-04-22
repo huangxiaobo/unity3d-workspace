@@ -59,14 +59,14 @@
 		CGPROGRAM
 		#pragma fragment frag
 		#pragma vertex vert
-		//#pragma fragmentoption ARB_fog_exp2
-		//#pragma fragmentoption ARB_precision_hint_fastest
+		#pragma fragmentoption ARB_fog_exp2
+		#pragma fragmentoption ARB_precision_hint_fastest
 		#include "UnityCG.cginc"
 
 		struct v2f {
-		    float4 pos : SV_POSITION;
+		    float4	  pos 			: SV_POSITION;
 		    float2    uv            : TEXCOORD0;
-		    float3    viewDir        : TEXCOORD1;
+		    float3    viewDir       : TEXCOORD1;
 		    float3    normal        : TEXCOORD2;
 		}; 
 
@@ -85,13 +85,12 @@
 		uniform sampler2D _MainTex;
 		float4 frag (v2f i)  : COLOR
 		{
-		    half4 texcol = tex2D( _MainTex, i.uv );
-
-		    half3 ambient = texcol.rgb * (UNITY_LIGHTMODEL_AMBIENT.rgb);
-		    return float4( ambient, texcol.a * _Color.a );
+		    half4 texcol = tex2D( _MainTex, i.uv);
+		    half3 ambient = texcol.rgb * (_Color.rgb);
+		    return float4( ambient,  texcol.a * _Color.a );
 		}
 		ENDCG
     }
     }
-    //FallBack "Diffuse"
+    FallBack "Diffuse"
 }

@@ -1,4 +1,4 @@
-﻿Shader "GLSL shader using blending (including back faces)" {
+﻿Shader "CG shader using blending (including back faces)" {
 	SubShader {
 		Tags { "Queue" = "Transparent" } 
 			// draw after all opaque geometry has been drawn
@@ -9,30 +9,32 @@
 				 // in order not to occlude other objects
 			Blend SrcAlpha OneMinusSrcAlpha // use alpha blending
  
-			GLSLPROGRAM
- 
-			#ifdef VERTEX
- 
-			void main()
+			CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+
+			struct appdata {
+				float4 vertex : POSITION;
+			};
+			
+			struct v2f
 			{
-				gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
-			}
- 
-			#endif
- 
- 
-			#ifdef FRAGMENT
- 
-			void main()
+				float4 pos : POSITION;
+				float3 color : COLOR;
+			};
+
+			v2f vert(appdata v)
 			{
-				gl_FragColor = vec4(1.0, 0.0, 0.0, 0.3);
-					// the fourth component (alpha) is important: 
-					// this is semitransparent red
+				v2f o;
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				return o;
 			}
- 
-			#endif
- 
-			ENDGLSL
+
+			float4 frag(v2f io) : COLOR
+			{
+				return float4(1.0, 0.0, 0.0, 0.3);
+			}
+			ENDCG
 		}
  
 		Pass {
@@ -43,30 +45,32 @@
 			Blend SrcAlpha OneMinusSrcAlpha 
 				// standard blend equation "source over destination"
  
-			GLSLPROGRAM
- 
-			#ifdef VERTEX
- 
-			void main()
+			CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+
+			struct appdata {
+				float4 vertex : POSITION;
+			};
+			
+			struct v2f
 			{
-				gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
-			}
- 
-			#endif
- 
- 
-			#ifdef FRAGMENT
- 
-			void main()
+				float4 pos : POSITION;
+				float3 color : COLOR;
+			};
+
+			v2f vert(appdata v)
 			{
-				gl_FragColor = vec4(0.0, 1.0, 0.0, 0.3);
-					// fourth component (alpha) is important: 
-					// this is semitransparent green
+				v2f o;
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				return o;
 			}
- 
-			#endif
- 
-			ENDGLSL
+
+			float4 frag(v2f io) : COLOR
+			{
+				return float4(0.0, 1.0, 0.0, 0.3);
+			}
+			ENDCG
 		}
 	}
 }

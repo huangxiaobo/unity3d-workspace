@@ -8,7 +8,7 @@ public class Game : MonoBehaviour {
 	
 	void Start () {//Set up things on the start method
 		point = target.transform.position;//get target's coords
-		transform.LookAt(point);//makes the camera look to it
+		//transform.LookAt(point);//makes the camera look to it
 	}
 	
 	void Update () {//makes the camera rotate around "point" coords, rotating around its Y axis, 20 degrees per second times the speed modifier

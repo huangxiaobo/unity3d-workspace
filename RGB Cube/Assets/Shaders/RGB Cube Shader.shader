@@ -1,35 +1,35 @@
-﻿Shader "GLSL shader for RGB cube" {
+﻿Shader "CG shader for RGB cube" {
 	SubShader {
 		Pass {
-			GLSLPROGRAM // here begin the vertex and the fragment shader
- 
-			varying vec4 position; 
-				// this line is part of the vertex and the fragment shader 
- 
-			#ifdef VERTEX 
-				// here begins the part that is only in the vertex shader
- 
-			void main()
+			CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+
+			struct appdata
 			{
-				position = gl_Vertex + vec4(0.5, 0.5, 0.5, 0.0);
-				gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
-			}
- 
-			#endif 
-				// here ends the part that is only in the vertex shader
- 
-			#ifdef FRAGMENT 
-				// here begins the part that is only in the fragment shader
- 
-			void main()
+				float4 vertex	: POSITION;
+				float normal 	: NORMAL;
+			};
+
+			struct v2f
 			{
-				gl_FragColor = position;
+				float4 pos : POSITION;
+				float4 color : COLOR;
+			};
+
+			v2f vert(appdata v)
+			{
+				v2f o;
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.color = v.normal;
+				return o;
 			}
- 
-			#endif 
-				// here ends the part that is only in the fragment shader
- 
-			ENDGLSL // here end the vertex and the fragment shader
+
+			float4 frag(v2f i) : COLOR
+			{
+				return i.color;
+			}
+			ENDCG // here begin the vertex and the fragment shader
 		}
 	}
 }

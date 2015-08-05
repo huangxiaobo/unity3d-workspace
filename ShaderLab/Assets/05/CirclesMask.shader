@@ -21,7 +21,7 @@
 				return mul (UNITY_MATRIX_MVP, v.vertex);
 			}
 
-			float4 frag(float4 sp:WPOS) : COLOR {
+			float4 frag(float4 sp:VPOS) : COLOR {
 				float2 wcoord = sp.xy/_ScreenParams.xy;
 				float4 color;
 				if (length(fmod(float2(_CirclesX*wcoord.x,_CirclesY*wcoord.y),2.0)-1.0)<_Fade) {

@@ -1,7 +1,6 @@
 ﻿Shader "ShaderLib/RimLight" {
 Properties {
 	_MainTex ("Base (RGBA) Gloss (A)", 2D) = "white" {}
-	_NormalTex ("Normal (RGB) ", 2D) = "white" {}
 	_SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
 	_Shininess ("Shininess", Range (0.01, 100)) = 0.078125
 	_RimColor ("Rim Color", Color) = (0.26,0.19,0.16,0.0)
@@ -20,7 +19,6 @@ SubShader {
 		uniform float4 _LightColor0; 
 			
 		sampler2D _MainTex;
-		sampler2D _NormalTex;
 		fixed4 _SpecColor;
 		half _Shininess;
 		float4 _RimColor;
@@ -86,8 +84,11 @@ SubShader {
 				//specularReflection = float3(1.0, 1.0, 0.0);
 				
 			}
-			return float4(diffuseReflection + specularReflection, 1.0);
-			return float4(1.0, 0.0, 0.0, 1.0);
+			
+			half rim = 1.0 - saturate(dot(viewDirection, normalDirection));
+			float3 rimReflection = _RimColor.rgb * pow(rim, _RimPower);
+
+			return float4(diffuseReflection + specularReflection + rimReflection, 1.0);
 		}
 		ENDCG
 	}
@@ -104,7 +105,6 @@ SubShader {
 		uniform float4 _LightColor0; 
 			
 		sampler2D _MainTex;
-		sampler2D _NormalTex;
 		fixed4 _SpecColor;
 		half _Shininess;
 		float4 _RimColor;
@@ -166,8 +166,11 @@ SubShader {
 				specularReflection = attenuation * _LightColor0.rgb * _SpecColor.rgb
 					* pow( 	max(0.0, dot(reflectLight, viewDirection)),  _Shininess	);
 			}
-			return float4(diffuseReflection + specularReflection, 1.0);
-			return float4(1.0, 0.0, 0.0, 1.0);
+
+			half rim = 1.0 - saturate(dot(viewDirection, normalDirection));
+			float3 rimReflection = _RimColor.rgb * pow(rim, _RimPower);
+
+			return float4(diffuseReflection + specularReflection + rimReflection, 1.0);
 		}
 		ENDCG
 	}	

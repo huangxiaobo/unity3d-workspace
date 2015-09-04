@@ -1,4 +1,4 @@
-﻿Shader "Basic Outline" {
+﻿Shader "ShaderLib/Outline-01" {
 	Properties {
 		_Color ("Main Color", Color) = (.5,.5,.5,1)
 		_OutlineColor ("Outline Color", Color) = (1,0.5,0,1)

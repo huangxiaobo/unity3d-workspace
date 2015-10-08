@@ -11,15 +11,15 @@ public class SynchronizeLights : MonoBehaviour
 		if (light0)
 		{
 			Vector3 lightDirection = light0.transform.rotation * new Vector3(0f, 0f, -1f);
-			renderer.material.SetVector("_LightDirection0", new Vector4(lightDirection.x, lightDirection.y, lightDirection.z, 0f));
-			renderer.material.SetColor("_MyLightColor0", light0.color);
+			GetComponent<Renderer>().material.SetVector("_LightDirection0", new Vector4(lightDirection.x, lightDirection.y, lightDirection.z, 0f));
+			GetComponent<Renderer>().material.SetColor("_MyLightColor0", light0.color);
 		}
 
 		if (light1)
 		{
 			Vector3 lightDirection = light1.transform.rotation * new Vector3(0f, 0f, -1f);
-			renderer.material.SetVector("_LightDirection1", new Vector4(lightDirection.x, lightDirection.y, lightDirection.z, 0f));
-			renderer.material.SetColor("_MyLightColor1", light1.color);
+			GetComponent<Renderer>().material.SetVector("_LightDirection1", new Vector4(lightDirection.x, lightDirection.y, lightDirection.z, 0f));
+			GetComponent<Renderer>().material.SetColor("_MyLightColor1", light1.color);
 		}
 	}
 }

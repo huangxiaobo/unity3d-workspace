@@ -26,6 +26,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -34,6 +35,12 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
+			
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -46,6 +53,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -54,6 +62,12 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.05, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
+				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -65,6 +79,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -73,6 +88,12 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.1, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
+				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -84,6 +105,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -92,6 +114,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.15, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -103,6 +130,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -111,6 +139,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.2, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -122,6 +155,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -130,6 +164,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.25, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -141,6 +180,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -149,6 +189,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.3, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -160,6 +205,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -168,6 +214,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.35, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -179,6 +230,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -187,6 +239,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.4, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -198,6 +255,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -206,6 +264,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.45, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -217,6 +280,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -225,6 +289,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.5, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -236,6 +305,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -244,6 +314,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.55, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -255,6 +330,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -263,6 +339,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.60, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -274,6 +355,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -282,6 +364,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.65, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -293,6 +380,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -301,6 +389,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.70, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -312,6 +405,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -320,6 +414,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.75, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -331,6 +430,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -339,6 +439,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.8, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -350,6 +455,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -358,6 +464,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.85, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -369,6 +480,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -377,6 +489,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.9, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{
@@ -388,6 +505,7 @@ Shader "ShaderLib/Fur"
 				CGPROGRAM
 #pragma exclude_renderers gles
 				#pragma vertex VertexProgram
+				#pragma fragment frag
 				#include "FurHelpers.cginc"
 
 				v2f VertexProgram (appdata_base v)
@@ -396,6 +514,11 @@ Shader "ShaderLib/Fur"
 					FurVertexPass(0.95, v, _FurLength, o.pos, o.fog, o.color, o.uv);	
 					return o;
 				}
+				half4 frag (v2f i) :COLOR
+				{
+					half4 color = tex2D(_MainTex, i.uv);
+					return color;
+				}				
 				ENDCG
 				SetTexture [_MainTex]
 				{

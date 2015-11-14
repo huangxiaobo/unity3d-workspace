@@ -8,17 +8,23 @@
 		Pass
 		{
 			CGPROGRAM
-			#pragma vertex vert_img
+			#pragma vertex vert
 			#pragma fragment frag
 			#pragma target 3.0
 			
 			#include "UnityCG.cginc"
 
-			uniform sampler2D _MainTex;
+			sampler2D _MainTex;
 	
-			float4 frag(v2f_img i) : COLOR {
-				float2 p = i.uv.xy / _ScreenParams.xy;
-				float2 uv = p * 0.1;	
+            float4 vert(appdata_base v) : POSITION {
+                return mul (UNITY_MATRIX_MVP, v.vertex);
+            }
+
+
+
+			float4 frag(float4 sp:VPOS) : SV_Target {
+				float2 p = sp.xy / _ScreenParams.xy;
+				float2 uv = p * 0.1;
 				
 				//---------------------------------------------	
 				// regular texture map filtering
@@ -43,7 +49,7 @@
 				float3 col = lerp( colA, colB, smoothstep( -0.1, 0.1, f ) );
 				col *= smoothstep( 0.0, 0.01, abs(f-0.0) );
 				
-				return float4( col, 1.0 );				
+				return float4( col, 1.0 );	
 			}
 			ENDCG
 		}

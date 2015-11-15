@@ -8,7 +8,7 @@
 		Pass
 		{
 			CGPROGRAM
-			#pragma vertex vert
+			#pragma vertex vert_img
 			#pragma fragment frag
 			#pragma target 3.0
 			
@@ -16,15 +16,9 @@
 
 			sampler2D _MainTex;
 	
-            float4 vert(appdata_base v) : POSITION {
-                return mul (UNITY_MATRIX_MVP, v.vertex);
-            }
-
-
-
-			float4 frag(float4 sp:VPOS) : SV_Target {
-				float2 p = sp.xy / _ScreenParams.xy;
-				float2 uv = p * 0.1;
+			float4 frag(v2f_img i) : SV_Target {
+				float2 p = i.uv;
+				float2 uv = i.uv * 0.1;
 				
 				//---------------------------------------------	
 				// regular texture map filtering
@@ -45,7 +39,7 @@
 				//---------------------------------------------	
 				// mix between the two colors
 				//---------------------------------------------	
-				float f = sin(3.14 * p.x + 0.7 * _Time);
+				float f = sin(3.14 * p.x + 1.7 * _Time);
 				float3 col = lerp( colA, colB, smoothstep( -0.1, 0.1, f ) );
 				col *= smoothstep( 0.0, 0.01, abs(f-0.0) );
 				

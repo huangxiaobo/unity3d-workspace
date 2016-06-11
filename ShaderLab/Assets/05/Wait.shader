@@ -1,41 +1,86 @@
 ﻿Shader "Custom/Waite" {
 	Properties {
-		_Color ("Color", Color) = (1,1,1,1)
-		_MainTex ("Albedo (RGB)", 2D) = "white" {}
-		_Glossiness ("Smoothness", Range(0,1)) = 0.5
-		_Metallic ("Metallic", Range(0,1)) = 0.0
+		_CornerRadius("Corner Radius", Float) = 0.1
 	}
 	SubShader {
-		Tags { "RenderType"="Opaque" }
-		LOD 200
+		// No culling or depth
+		Blend SrcAlpha  OneMinusSrcAlpha
+		Cull Off ZWrite Off ZTest Always
+
+		Pass
+		{
 		
-		CGPROGRAM
-		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows
+			CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+			
+			#include "UnityCG.cginc"
 
-		// Use shader model 3.0 target, to get nicer looking lighting
-		#pragma target 3.0
+			struct appdata
+			{
+				float4 vertex : POSITION;
+				float2 uv : TEXCOORD0;
+			};
 
-		sampler2D _MainTex;
+			struct v2f
+			{
+				float2 uv : TEXCOORD0;
+				float4 vertex : SV_POSITION;
+			};
 
-		struct Input {
-			float2 uv_MainTex;
-		};
+			v2f vert (appdata v)
+			{
+				v2f o;
+				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.uv = v.uv;
+				return o;
+			}
 
-		half _Glossiness;
-		half _Metallic;
-		fixed4 _Color;
+			fixed calcDot(fixed a, fixed ca, fixed2 uv) {  
+				a /= 57.295779513;  
+				ca /= 57.295779513;  
+				fixed tt = 180/57.295779513;  
+				uv = (fixed2(cos(a), sin(a)) * 0.2+ uv)*10;  
+				fixed adit = tt*2*step(tt, a-ca);  
+				fixed r = 1-step(ca + adit, a);  
+				r *= lerp(0.2, -1, saturate((ca-a+adit)/25))*2;  
+				return smoothstep(r-0.2, r, length(uv.xy));  
+			}  	
+			
+			fixed4 frag (v2f i) : SV_Target
+			{
+				float2 uv = i.uv;
+				uv = uv.xy - float2(0.5, 0.5);
 
-		void surf (Input IN, inout SurfaceOutputStandard o) {
-			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = c.rgb;
-			// Metallic and smoothness come from slider variables
-			o.Metallic = _Metallic;
-			o.Smoothness = _Glossiness;
-			o.Alpha = c.a;
+				// 背景
+				float rx = fmod(uv.x, 0.4);
+				float ry = fmod(uv.y, 0.4);
+				float mx = step(0.4, abs(uv.x));
+				float my = step(0.4, abs(uv.y));
+				float alpha = 1 - mx * my * step(0.1, length(float2(rx, ry)));
+
+				fixed4 foreColor = fixed4(1, 1, 1, 1);  
+				fixed4 bgColor = fixed4(fixed3(0.4, 0.4, 0.4),alpha);  
+				fixed4 result = bgColor;  
+				// 圆点
+				float ca = fmod(_Time.y, 2) * 180;	//角度
+				bgColor = lerp(foreColor, bgColor, calcDot(0, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(30, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(60, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(90, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(120, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(150, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(180, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(210, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(240, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(270, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(300, ca, uv));  
+				bgColor = lerp(foreColor, bgColor, calcDot(330, ca, uv));  
+
+				return bgColor;
+			}
+			ENDCG
 		}
-		ENDCG
 	} 
 	FallBack "Diffuse"
 }

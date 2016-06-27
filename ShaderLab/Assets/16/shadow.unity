@@ -172,6 +172,7 @@ GameObject:
   - 33: {fileID: 1069629000}
   - 135: {fileID: 1069628999}
   - 23: {fileID: 1069628998}
+  - 114: {fileID: 1069629002}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -237,6 +238,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1069629002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1069628997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2010ac7b15e64bd4cad2f2dcbd947ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane: {fileID: 682685355}
 --- !u!1 &1963009911
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +361,7 @@ Light:
   m_GameObject: {fileID: 2097769822}
   m_Enabled: 1
   serializedVersion: 6
-  m_Type: 2
+  m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10

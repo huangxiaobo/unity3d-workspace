@@ -78,7 +78,7 @@
 					lightDirection = -normalize(_WorldSpaceLightPos0); 
 				}
 
-				// 因为 _World2Receiver是默认的，所以world2ReceiverRow1 = float4(0, 1, 0, 0)
+				// 因为 _World2Receiver是通过ShadowReceiver脚本设置的
 				float4 world2ReceiverRow1 = float4(_World2Receiver[1][0], _World2Receiver[1][1], _World2Receiver[1][2], _World2Receiver[1][3]);
 				// 计算顶点到投影平面的距离 从原点指向顶点，所以distanceOfVertex为正
 				float distanceOfVertex = dot(world2ReceiverRow1, vertexInWorldSpace); 

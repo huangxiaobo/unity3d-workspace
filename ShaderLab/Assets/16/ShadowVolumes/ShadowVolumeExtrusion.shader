@@ -12,15 +12,15 @@ Shader "Hidden/ShadowVolume/Extrusion" {
 
 	struct appdata {
 		float4 vertex : POSITION;
-		float3 normal : TEXCOORD0;
+		float3 normal : NORMAL;
 	};
 
-	float _Extrusion;
+	uniform float _Extrusion;
 
 	// camera space light position
 	// xyz = position, w = 1 for point/spot lights
 	// xyz = direction, w = 0 for directional lights
-	float4 _LightPosition;
+	uniform float4 _LightPosition;
 
 	float4 vert( appdata v ) : POSITION {
 		
@@ -36,6 +36,11 @@ Shader "Hidden/ShadowVolume/Extrusion" {
 		
 		return mul( UNITY_MATRIX_MVP, v.vertex );
 	}
+
+	float4 frag (float4 pos:POSITION)  : COLOR
+	{
+		return float4(1, 0, 0, 1);
+	}
 	ENDCG
 
 
@@ -50,25 +55,27 @@ Shader "Hidden/ShadowVolume/Extrusion" {
 		Pass {
 			Cull Back
 			Blend DstColor One
-
-			CGINCLUDE
+			
+			CGPROGRAM
 			#pragma vertex vert
+			#pragma fragment frag
 			ENDCG
-
-			SetTexture[_MainTex] { constantColor(1,1,1,1) combine constant }		
 		
+			SetTexture[_MainTex] { constantColor(1,1,1,1) combine constant }		
 		}
 		
 		// Draw back faces, halving the value in alpha channel
 		Pass {
 			Cull Front
 			Blend DstColor Zero
-
-			CGINCLUDE
+			
+			CGPROGRAM
 			#pragma vertex vert
+			#pragma fragment frag
 			ENDCG
-
+		
 			SetTexture[_MainTex] { constantColor(0.5,0.5,0.5,0.5) combine constant }
+			
 		}
 	} 
 

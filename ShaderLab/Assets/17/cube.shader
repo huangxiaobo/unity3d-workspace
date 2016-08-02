@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/17/Glow"
+﻿Shader "ShaderLib/17/Cube"
 {
 	Properties
 	{
@@ -17,6 +17,8 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
+			// make fog work
+			#pragma multi_compile_fog
 			
 			#include "UnityCG.cginc"
 
@@ -36,6 +38,8 @@
 			sampler2D _GlowTex;
 			float4 _MainTex_ST;
 			float4 _GlowColor;
+
+			const float EPSILON = 0.0001;
 			
 			v2f vert (appdata v)
 			{
@@ -44,12 +48,22 @@
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				return o;
 			}
-
+			
 			fixed4 frag (v2f i) : SV_Target
 			{
+				// sample the texture
+				fixed4 final_col = fixed4(0, 0, 0, 0);
+
+				fixed4 main_col = tex2D(_MainTex, i.uv);
 				fixed4 glow_col = tex2D(_GlowTex, i.uv);
-				
-				return glow_col * _GlowColor;
+				// return glow_col + _GlowColor + main_col;
+				if (glow_col.x  * glow_col.y  * glow_col.z > EPSILON) {
+					final_col = fixed4(glow_col.xyz, 1.0) * _GlowColor;
+				}
+				else {
+					final_col = fixed4(main_col.xyz, 1.0);
+				}
+				return final_col;
 			}
 			ENDCG
 		}

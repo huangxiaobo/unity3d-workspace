@@ -1,4 +1,4 @@
-Shader "Custom/AOTestGenerate" 
+Shader "ShaderLib/15/AOTestGenerate" 
 {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}

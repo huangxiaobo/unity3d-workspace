@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 01-01
+  m_Name: Vertex
   m_Shader: {fileID: 4800000, guid: 3d18976e269aca941842ae0572bb0c25, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -30,9 +30,9 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _MainColor
-        second: {r: .968627453, g: .109803922, b: 0, a: 1}
-      data:
-        first:
           name: _SpecularColor
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _MainColor
+        second: {r: 0.5661765, g: 0.08823532, b: 0, a: 0}

@@ -1,7 +1,6 @@
-Shader "ShaderLib/01-01" {
+Shader "ShaderLib/01/Vertex" {
 	Properties {
 		_MainColor ("Main Color", Color) = (0, 0, 0)
-		_SpecularColor ("Speculor Color", Color) = (1, 1, 1)
 	}
 	SubShader {
 		Pass {
@@ -14,24 +13,24 @@ Shader "ShaderLib/01-01" {
 		#pragma vertex vert
 		#pragma fragment frag
 
-		sampler2D _MainTex;
+		float4 _MainColor;
 
 		struct v2f {
-			float4 pos : SV_POSITION;
-			float3 eye_direction : TEXCOORD1;
+			float4 pos : POSITION;
+			float2 uv : TEXCOORD0;
 		};
 						
 		v2f vert(appdata_base v) {
 			v2f o;
 			
 			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.uv = v.texcoord.xy;
 			
-			o.eye_direction = normalize(_WorldSpaceCameraPos.xyz - mul(v.vertex, _Object2World).xyz);
 			return o;
 		}
 		
 		float4 frag (v2f v):COLOR {
-			return float4(abs(v.eye_direction.xyz), 1);
+			return _MainColor * sin(fmod(_Time.y, 1.0) * 3.14);
 		}
 		
 		

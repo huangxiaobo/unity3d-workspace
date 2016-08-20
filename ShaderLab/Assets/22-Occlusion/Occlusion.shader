@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/22/Occlusion"
+﻿Shader "Hidden/ShaderLib/22/Occlusion"
 {
 	Properties
 	{

@@ -1,4 +1,4 @@
-﻿Shader "Unlit/DissolveShader"
+﻿Shader "Hidden/ShaderLib/20/DissolveShader"
 {
 	Properties
 	{

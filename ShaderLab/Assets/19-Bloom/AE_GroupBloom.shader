@@ -1,4 +1,4 @@
-Shader "ShaderLib/19/AE_GroupBloom" {
+Shader "Hidden/ShaderLib/19/AE_GroupBloom" {
 	Properties {
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_BloomTex ("BloomTex (RGB)", 2D) = "white" {}

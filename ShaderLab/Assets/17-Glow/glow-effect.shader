@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/17/GlowEffect"
+﻿Shader "Hidden/ShaderLib/17/GlowEffect"
 {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "" {}

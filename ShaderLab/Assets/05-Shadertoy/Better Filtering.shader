@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/Better Filtering"
+﻿Shader "Hidden/ShaderLib/05/Better Filtering"
 {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}

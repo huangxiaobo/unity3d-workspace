@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/RimLight" {
+﻿Shader "Hidden/ShaderLib/08/RimLight" {
 Properties {
 	_MainTex ("Base (RGBA) Gloss (A)", 2D) = "white" {}
 	_SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)

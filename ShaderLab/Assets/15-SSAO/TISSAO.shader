@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/15/TISSAO"
+﻿Shader "Hidden/ShaderLib/15/TISSAO"
 {
 	Properties {
 			_MainTex ("Base (RGB)", 2D) = "" {}

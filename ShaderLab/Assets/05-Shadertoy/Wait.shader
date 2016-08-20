@@ -1,4 +1,4 @@
-﻿Shader "Custom/Waite" {
+﻿Shader "Hidden/ShaderLib/05/Waite" {
 	Properties {
 		_CornerRadius("Corner Radius", Float) = 0.1
 	}

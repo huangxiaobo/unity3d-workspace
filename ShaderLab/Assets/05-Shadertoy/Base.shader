@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/Base" {
+﻿Shader "Hidden/ShaderLib/05/Base" {
 	SubShader {
 		Pass {
 			CGPROGRAM

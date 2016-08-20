@@ -1,4 +1,4 @@
-Shader "Hidden/ShadowVolume/ShadowVolumeAlpha" {
+Shader "Hidden/ShaderLib/16/ShadowVolume/ShadowVolumeAlpha" {
 	SubShader { 
 		ColorMask A 
 		ZTest Always Cull Off ZWrite Off

@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/23/Phong"
+﻿Shader "Hidden/ShaderLib/23/Phong"
 {
 	Properties
 	{	

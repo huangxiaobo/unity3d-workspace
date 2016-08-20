@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/Palettes"
+﻿Shader "Hidden/ShaderLib/05/Palettes"
 {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}

@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/19/BloomEmitter"
+﻿Shader "Hidden/ShaderLib/19/BloomEmitter"
 {
 	Properties
 	{

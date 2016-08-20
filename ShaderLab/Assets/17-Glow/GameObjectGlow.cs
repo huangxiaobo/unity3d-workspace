@@ -52,7 +52,7 @@ public class GameObjectGlow : MonoBehaviour {
 		{
 			if (m_GlowShader == null)
 			{
-				m_GlowShader = Shader.Find("ShaderLib/17/Glow");
+				m_GlowShader = Shader.Find("Hidden/ShaderLib/17/Glow");
 			}
 
 			return m_GlowShader;
@@ -66,7 +66,7 @@ public class GameObjectGlow : MonoBehaviour {
 	 {
 		 if (m_GlowMaterial == null)
 		 {
-			 m_GlowMaterial = new Material(Shader.Find("ShaderLib/17/GlowEffect"));
+			 m_GlowMaterial = new Material(Shader.Find("Hidden/ShaderLib/17/GlowEffect"));
 			 m_GlowMaterial.hideFlags = HideFlags.HideAndDontSave;
 		 }
 
@@ -81,7 +81,7 @@ public class GameObjectGlow : MonoBehaviour {
 	 {
 		 if (m_BlurMaterial == null)
 		 {
-			 m_BlurMaterial = new Material(Shader.Find("ShaderLib/18/GaussianBlurEffect"));
+			 m_BlurMaterial = new Material(Shader.Find("Hidden/ShaderLib/18/GaussianBlurEffect"));
 			 m_BlurMaterial.hideFlags = HideFlags.HideAndDontSave;
 		 }
 

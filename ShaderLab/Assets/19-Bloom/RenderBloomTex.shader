@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/19/RenderBloomTex" {//modified from "Unlit/Color"
+﻿Shader "Hidden/ShaderLib/19/RenderBloomTex" {//modified from "Unlit/Color"
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "" {}
 		_Color ("Main Color", Color) = (1,1,1,1)

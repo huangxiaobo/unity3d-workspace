@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/23/BRDF"
+﻿Shader "Hidden/ShaderLib/23/BRDF"
 {
 	Properties 
 	{

@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/17/Glow"
+﻿Shader "Hidden/ShaderLib/17/Glow"
 {
 	Properties
 	{

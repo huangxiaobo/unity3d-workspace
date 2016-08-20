@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/Smooth Lines" {
+﻿Shader "Hidden/ShaderLib/05/Smooth Lines" {
 	SubShader {
 		Pass {
 			CGPROGRAM

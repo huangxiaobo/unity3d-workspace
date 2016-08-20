@@ -1,4 +1,4 @@
-Shader "ShaderLib/05/BasicTexShader" { // defines the name of the shader 
+Shader "Hidden/ShaderLib/05/BasicTexShader" { // defines the name of the shader 
 	Properties {
 		_Color ("Diffuse Material Color", Color) = (1,1,1,1) 
 		_SpecColor ("Specular Material Color", Color) = (1,1,1,1) 

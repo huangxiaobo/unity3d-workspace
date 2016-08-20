@@ -1,7 +1,4 @@
-// Upgrade NOTE: replaced 'glstate.matrix.invtrans.modelview[0]' with 'UNITY_MATRIX_IT_MV'
-// Upgrade NOTE: replaced 'glstate.matrix.mvp' with 'UNITY_MATRIX_MVP'
-
-Shader "Hidden/ShadowVolume/Extrusion" {
+Shader "Hidden/ShaderLib/16/ShadowVolume/Extrusion" {
 	Properties {
 		_Extrusion ("Extrusion", Range(0,30)) = 5.0
 	}

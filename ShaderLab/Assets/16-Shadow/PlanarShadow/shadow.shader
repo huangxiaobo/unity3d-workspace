@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/16/Shadow" {
+﻿Shader "Hidden/ShaderLib/16/PlanarShadow/Shadow" {
 	Properties {
 		_Color ("Object's Color", Color) = (0,1,0,1)
 		_ShadowColor ("Shadow's Color", Color) = (0,0,0,1)

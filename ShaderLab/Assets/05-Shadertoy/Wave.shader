@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/Wave"
+﻿Shader "Hidden/ShaderLib/05/Wave"
 {
 	Properties
 	{

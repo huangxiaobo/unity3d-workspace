@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/18/GaussianBlurEffect"
+﻿Shader "Hidden/ShaderLib/18/GaussianBlurEffect"
 {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "" {}

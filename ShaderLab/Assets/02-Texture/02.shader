@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/02" {
+﻿Shader "Hidden/ShaderLib/02/Texture" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_ScrollSppedX ("Scroll Speed X", Range(-10, 10)) = 2

@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/Outline-02" {
+﻿Shader "Hidden/ShaderLib/07/Outline-02" {
 	Properties {
 		_Color ("Main Color", Color) = (.5,.5,.5,1)
 		_OutlineColor ("Outline Color", Color) = (0,0,0,1)

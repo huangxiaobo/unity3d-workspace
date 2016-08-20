@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/23/Blin-Phong"
+﻿Shader "Hidden/ShaderLib/23/Blin-Phong"
 {
 	Properties
 	{	

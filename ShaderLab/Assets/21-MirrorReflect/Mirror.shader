@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Mirror"
+﻿Shader "Hidden/ShaderLib/21/Mirror"
 {
 	Properties
 	{

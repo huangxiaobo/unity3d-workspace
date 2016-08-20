@@ -1,4 +1,4 @@
-Shader "ShaderLib/15/AOTestBlur" 
+Shader "Hidden/ShaderLib/15/AOTestBlur" 
 {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}

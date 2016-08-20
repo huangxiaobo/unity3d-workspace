@@ -1,4 +1,4 @@
-Shader "ShaderLib/01/Vertex" {
+Shader "Hidden/ShaderLib/01/Vertex" {
 	Properties {
 		_MainColor ("Main Color", Color) = (0, 0, 0)
 	}

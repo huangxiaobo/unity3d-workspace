@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/Vignetting" {
+﻿Shader "Hidden/ShaderLib/05/Vignetting" {
   SubShader {
         Pass {
             CGPROGRAM

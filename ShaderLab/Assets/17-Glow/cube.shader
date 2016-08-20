@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/17/Cube"
+﻿Shader "Hidden/ShaderLib/17/Cube"
 {
 	Properties
 	{

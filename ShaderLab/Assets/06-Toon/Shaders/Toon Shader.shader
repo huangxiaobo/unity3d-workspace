@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/06-01" {
+﻿Shader "Hidden/ShaderLib/06/Toon" {
 	Properties {
 		_Color ("Diffuse Color 散射颜色", Color) = (1,1,1,1) 
 		_UnlitColor ("Unlit Diffuse Color 未照亮的散射颜色", Color) = (0.5,0.5,0.5,1) 

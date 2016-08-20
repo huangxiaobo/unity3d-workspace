@@ -1,4 +1,4 @@
-Shader "ShaderLib/Fur"
+Shader "Hidden/ShaderLib/09/Fur"
 {
 	Properties
 	{

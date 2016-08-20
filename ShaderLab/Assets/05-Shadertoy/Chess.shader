@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/Chess" {
+﻿Shader "Hidden/ShaderLib/05/Chess" {
 	SubShader {
 		Pass {
 			CGPROGRAM

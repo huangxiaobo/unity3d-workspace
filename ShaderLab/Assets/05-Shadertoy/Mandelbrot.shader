@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/Mandelbrot" {
+﻿Shader "Hidden/ShaderLib/05/Mandelbrot" {
 	SubShader {
 		Pass {
 			CGPROGRAM

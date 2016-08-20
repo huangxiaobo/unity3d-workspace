@@ -1,4 +1,4 @@
-Shader "ShaderLib/15/AOTestBlit" 
+Shader "Hidden/ShaderLib/15/AOTestBlit" 
 {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}

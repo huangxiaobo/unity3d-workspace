@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/23/Lambert"
+﻿Shader "Hidden/ShaderLib/23/Lambert"
 {
 	Properties
 	{	

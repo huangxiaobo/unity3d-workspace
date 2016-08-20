@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/AppendBufferCg"
+﻿Shader "Hidden/ShaderLib/10/AppendBufferCg"
 {
     SubShader
     {

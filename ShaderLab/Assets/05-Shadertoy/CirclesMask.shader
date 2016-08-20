@@ -1,4 +1,4 @@
-﻿Shader "ShaderLib/05/CirclesMask" {
+﻿Shader "Hidden/ShaderLib/05/CirclesMask" {
 	Properties {
 		_CirclesX ("Circles in X", Float) = 20
 		_CirclesY ("Circles in Y", Float) = 10

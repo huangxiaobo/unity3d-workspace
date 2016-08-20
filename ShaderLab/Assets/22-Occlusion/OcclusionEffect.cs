@@ -54,7 +54,7 @@ public class OcclusionEffect : MonoBehaviour
 		{
 			if (m_OcclusionMaterial == null)
 			{
-				m_OcclusionMaterial = new Material(Shader.Find("ShaderLib/22/Occlusion"));
+				m_OcclusionMaterial = new Material(Shader.Find("Hidden/ShaderLib/22/Occlusion"));
 				m_OcclusionMaterial.hideFlags = HideFlags.HideAndDontSave;
 			}
 

@@ -38,6 +38,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _BloomTex
+        second:
+          m_Texture: {fileID: 8400000, guid: ec1ef68bbe14c304496e751b1c7e2c7c, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -78,13 +85,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _BloomTex
-        second:
-          m_Texture: {fileID: 8400000, guid: ec1ef68bbe14c304496e751b1c7e2c7c, type: 2}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -98,6 +98,10 @@ Material:
         first:
           name: _Cutoff
         second: 0.5
+      data:
+        first:
+          name: _BloomSpeed
+        second: 0.75
       data:
         first:
           name: _Parallax
@@ -138,10 +142,6 @@ Material:
         first:
           name: _BloomFactor
         second: 1.77
-      data:
-        first:
-          name: _BloomSpeed
-        second: 0.75
     m_Colors:
       data:
         first:

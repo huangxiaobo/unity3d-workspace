@@ -149,7 +149,7 @@ Material:
       data:
         first:
           name: _SpecularPower
-        second: 100
+        second: 80.9
     m_Colors:
       data:
         first:
